@@ -55,12 +55,7 @@ async function showData() {
 
         }
 
-        main.insertAdjacentHTML('beforeend' , ` <div class="example">
-        <p class="pos">Examples</p>
-        <ul>
-           
-        </ul>
-    </div>`)
+       
 
 
         for (let j = 0; j < data[0]['meanings'].length; j++) {
