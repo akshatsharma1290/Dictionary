@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/phone.css" />
     <script defer src="js/index.js"></script>
+    <script defer src="js/dynamicContent.js"></script>
   </head>
   <body>
     <main class="wrapper">
-      <header>
+      <form>
         <input type="text" name="query" id="query" class="query" required />
         <span class="placeholder">Search</span>
         <button class="search-btn">Search</button>
-      </header>
-      <main>
-        <div class="title"></div>
+      </form>
+      <section>
+        <h4 class="heading"></h4>
         <div class="results"></div>
-      </main>
+      </section>
     </main>
   </body>
 </html>
