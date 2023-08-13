@@ -1,5 +1,5 @@
 @media (width <= 768px) {
-  .box {
+  .wrapper {
     width: 95vw;
     display: flex;
     flex-direction: column;
@@ -8,19 +8,19 @@
     width: 95vw;
     justify-content: unset !important;
   }
-  .box button {
+  .wrapper button {
     width: 22vw;
     font-size: 15px;
   }
-  .box input {
+  .wrapper input {
     width: 59vw;
     font-size: 1rem;
   }
-  .box .label {
+  .wrapper .placeholder {
     left: 13px;
   }
-  .box input:valid ~ span,
-  .box input:focus ~ span {
+  .wrapper input:valid ~ span,
+  .wrapper input:focus ~ span {
     transform: translateX(3vw) translateY(-5.7vw);
     font-size: 0.8rem;
     background-color: white;
@@ -30,7 +30,7 @@
 
 
 @media (500px <= width <= 768px){
-    .box button{
+    .wrapper button{
         width: 27vw;
         font-size: 17px;
     }

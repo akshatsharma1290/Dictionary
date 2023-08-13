@@ -25,21 +25,21 @@ body {
   overflow-x: hidden;
 }
 
-.box {
+.wrapper {
   width: 55vw;
   padding: 20px;
   /* height: 400px; */
   background-color: #fff;
   border-radius: 8px;
 }
-.box header {
+.wrapper header {
   display: flex;
   justify-content: center;
   gap: 15px;
   position: relative;
   height: fit-content;
 }
-.box input {
+.wrapper input {
   outline: none;
   border: 2px solid blueviolet;
   width: 40vw;
@@ -49,7 +49,7 @@ body {
   font: inherit;
   font-size: 1.1rem;
 }
-.box button {
+.wrapper button {
   width: 10vw;
   height: 45px;
   background-color: blueviolet;
@@ -62,7 +62,7 @@ body {
   cursor: pointer;
   transition: 0.1s;
 }
-.box .label {
+.wrapper .placeholder {
   position: absolute;
   align-self: center;
   left: 20px;
@@ -71,8 +71,8 @@ body {
   pointer-events: none;
   transition: 0.4s;
 }
-.box input:valid ~ span,
-.box input:focus ~ span {
+.wrapper input:valid ~ span,
+.wrapper input:focus ~ span {
   transform: translateX(1.5vw) translateY(-1.6vw);
   font-size: 0.9rem;
   background-color: white;
