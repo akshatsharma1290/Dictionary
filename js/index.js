@@ -1,4 +1,4 @@
-import { displayHeader } from "./dynamichtml.js";
+import { renderMeanings, renderWordHeaderWithAudio } from "./dynamichtml.js";
 const query = document.querySelector(".query");
 const searchButton = document.querySelector(".search-btn");
 
@@ -19,28 +19,10 @@ async function showData(e) {
     return;
   }
 
-  displayHeader(query.value, data.phonetics);
+  renderWordHeaderWithAudio(query.value, data.phonetics);
+  renderMeanings(data.meanings)
 
-  //     title.innerHTML = ``;
 
-  //     if (document.querySelector(".phenotic").innerHTML == "undefined") {
-  //       for (let i = 0; i < data[0]["phonetics"].length; i++) {
-  //         if (data[0]["phonetics"][i]["text"] != undefined) {
-  //           document.querySelector(".phenotic").innerHTML =
-  //             data[0]["phonetics"][i]["text"];
-  //           break;
-  //         }
-  //       }
-  //     }
-
-  //     for (let j = 0; j < data[0]["meanings"].length; j++) {
-  //       meanings.insertAdjacentHTML(
-  //         "beforeend",
-  //         `  <div class="pos">${data[0]["meanings"][j]["partOfSpeech"]}</div>
-  // <div class="definitions">
-  // <p class="def">${data[0]["meanings"][j]["definitions"][0]["definition"]}</p> `
-  //       );
-  //     }
 }
 
 searchButton.addEventListener("click", showData);

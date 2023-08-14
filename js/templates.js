@@ -6,4 +6,11 @@ const headerTemplate = `
 </div>
 `;
 
-export {headerTemplate}
+const meaningsTemplate = `
+<p class="partOfSpeech">{partOfSpeech}</p>
+   <div class="definitions">
+   <p class="def">{definition}</p>
+   </div>
+`;
+
+export { headerTemplate  , meaningsTemplate};

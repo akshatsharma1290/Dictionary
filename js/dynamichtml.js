@@ -1,8 +1,8 @@
-import { headerTemplate } from "./templates.js";
+import { headerTemplate, meaningsTemplate } from "./templates.js";
 const header = document.querySelector(".header");
-const results = document.querySelector(".results");
+const meanings = document.querySelector(".meanings");
 
-export const displayHeader = (word, phonetics) => {
+export const renderWordHeaderWithAudio = (word, phonetics) => {
   const { text, audio } = getPhoneticAndAudio(phonetics);
 
   const headerContent = headerTemplate
@@ -10,6 +10,7 @@ export const displayHeader = (word, phonetics) => {
     .replace("{text}", text);
 
   header.innerHTML = headerContent;
+
   const pronunciation = new Audio(audio);
 
   const audioHtml = document.querySelector(".audio");
@@ -33,3 +34,15 @@ const getPhoneticAndAudio = (phoneticsObj) => {
 
   return { text, audio };
 };
+
+export const renderMeanings = (results) => {
+    results.forEach((item) => {
+      meanings.insertAdjacentHTML(
+        "beforeend",
+        meaningsTemplate
+          .replace("{partOfSpeech}", item.partOfSpeech)
+          .replace("{definition}", item.definitions[0]["definition"])
+      );
+    });
+  };
+
