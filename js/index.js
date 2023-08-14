@@ -13,16 +13,13 @@ const dictionaryLookup = async (query) => {
 async function showData(e) {
   e.preventDefault();
   const data = await dictionaryLookup(query.value);
-  console.log(data);
-  if (data.length === 0) {
+  if (!data) {
     alert("Result Not Found.");
     return;
   }
 
   renderWordHeaderWithAudio(query.value, data.phonetics);
-  renderMeanings(data.meanings)
-
-
+  renderMeanings(data.meanings);
 }
 
 searchButton.addEventListener("click", showData);

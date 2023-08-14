@@ -13,4 +13,4 @@ const meaningsTemplate = `
    </div>
 `;
 
-export { headerTemplate  , meaningsTemplate};
+export { headerTemplate, meaningsTemplate };

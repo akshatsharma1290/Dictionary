@@ -36,13 +36,12 @@ const getPhoneticAndAudio = (phoneticsObj) => {
 };
 
 export const renderMeanings = (results) => {
-    results.forEach((item) => {
-      meanings.insertAdjacentHTML(
-        "beforeend",
-        meaningsTemplate
-          .replace("{partOfSpeech}", item.partOfSpeech)
-          .replace("{definition}", item.definitions[0]["definition"])
-      );
-    });
-  };
-
+  results.forEach((item) => {
+    meanings.insertAdjacentHTML(
+      "beforeend",
+      meaningsTemplate
+        .replace("{partOfSpeech}", item.partOfSpeech)
+        .replace("{definition}", item.definitions[0]["definition"])
+    );
+  });
+};
